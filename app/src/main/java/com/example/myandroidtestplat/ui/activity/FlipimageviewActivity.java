@@ -3,6 +3,7 @@ package com.example.myandroidtestplat.ui.activity;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AnticipateOvershootInterpolator;
@@ -20,7 +21,7 @@ import com.example.myandroidtestplat.R;
 import com.example.myandroidtestplat.ui.widget.FlipImageView;
 
 
-public class SampleActivity extends Activity implements FlipImageView.OnFlipListener,
+public class FlipimageviewActivity extends Activity implements FlipImageView.OnFlipListener,
         SeekBar.OnSeekBarChangeListener {
 
     private static final String[] fData = new String[]{
@@ -30,7 +31,6 @@ public class SampleActivity extends Activity implements FlipImageView.OnFlipList
             "Bounce",
             "Overshoot",
             "AnticipateOvershoot"
-
     };
 
     private static final Interpolator[] fInterpolators = new Interpolator[]{
@@ -67,7 +67,7 @@ public class SampleActivity extends Activity implements FlipImageView.OnFlipList
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_test_flipimage);
+        setContentView(R.layout.activity_flipimage);
 
         mTextViewAnimationListener = (TextView) findViewById(R.id.textview);
         mFlipImageView = (FlipImageView) findViewById(R.id.imageview);
@@ -78,6 +78,7 @@ public class SampleActivity extends Activity implements FlipImageView.OnFlipList
         mCheckBoxY = (CheckBox) findViewById(R.id.checkedtextview_y);
         mCheckBoxZ = (CheckBox) findViewById(R.id.checkedtextview_z);
         mCheckBoxReverse = (CheckBox) findViewById(R.id.checkedtextview_reverse);
+        TextView tv_test = (TextView) findViewById(R.id.tv_test);
 
         mSpinner.setAdapter(
                 new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, fData));
@@ -85,6 +86,16 @@ public class SampleActivity extends Activity implements FlipImageView.OnFlipList
         mSeekBar.setOnSeekBarChangeListener(this);
 
         mFlipImageView.setOnFlipListener(this);
+
+        final float[] angle = {20f};
+        tv_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                mFlipImageView.setFlipAngle(angle[0]);
+                angle[0] +=20f;
+                mFlipImageView.toggleFlip();
+            }
+        });
     }
 
     /////////////////////FLIP IMAGE VIEW///////////////////

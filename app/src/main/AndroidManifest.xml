@@ -52,11 +52,31 @@
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.myandroidtestplat.ui.activity.SampleActivity"
+            android:name="com.example.myandroidtestplat.ui.activity.FlipimageviewActivity"
+            android:theme="@style/Theme.MyAndroidTestPlat.NoActionBar"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.myandroidtestplat.ui.activity.SmplesActivity"
+            android:theme="@style/Theme.MyAndroidTestPlat.NoActionBar"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.myandroidtestplat.ui.activity.ShareElementsActivity"
+            android:theme="@style/Theme.MyAndroidTestPlat.NoActionBar"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ui.shareelements.ui.details.DetailsActivity"
             android:theme="@style/Theme.MyAndroidTestPlat.NoActionBar"
             android:label="@string/app_name" >
         </activity>
 
+        <activity
+            android:name=".ui.shareelements.ui.list.ShareElementsListActivity"
+            android:theme="@style/Theme.MyAndroidTestPlat.NoActionBar"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>

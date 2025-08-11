@@ -14,7 +14,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myandroidtestplat.databinding.ActivityMainBinding
-import com.example.myandroidtestplat.ui.activity.SampleActivity
+import com.example.myandroidtestplat.ui.activity.FlipimageviewActivity
+import com.example.myandroidtestplat.ui.activity.SmplesActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,7 +33,8 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null)
                 .setAnchorView(R.id.fab).show()
 
-            var intent=Intent(this,SampleActivity::class.java)
+            var intent=Intent(this,
+                SmplesActivity::class.java)
             startActivity(intent)
         }
 

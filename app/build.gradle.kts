@@ -1,6 +1,9 @@
+import org.jetbrains.kotlin.gradle.internal.ParcelizeSubplugin
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-parcelize")
 }
 
 android {
@@ -36,11 +39,16 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
 }
 
 dependencies {
 
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.kotlin.stdlib)
+//    implementation(libs.kotlinx.parcelize.runtime)
+    implementation(libs.material.v1110)
     implementation(project(":bottomsheet_common"))
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -53,4 +61,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 }
