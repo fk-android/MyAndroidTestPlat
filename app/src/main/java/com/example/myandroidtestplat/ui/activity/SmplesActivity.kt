@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import com.example.myandroidtestplat.databinding.ActivitySmplesBinding
+import com.example.myandroidtestplat.ui.shareelementdemo2.ShareElement2Activity
 import com.example.myandroidtestplat.ui.shareelements.ui.list.ShareElementsListActivity
 
 /**
@@ -31,6 +32,11 @@ class SmplesActivity: BaseActivity() {
         binding.tvShareElement.setOnClickListener{
             startActivity(Intent(mActivity,
                 ShareElementsListActivity::class.java))
+        }
+
+        binding.tvShareElement2.setOnClickListener{
+            startActivity(Intent(mActivity,
+                ShareElement2Activity::class.java))
         }
     }
 

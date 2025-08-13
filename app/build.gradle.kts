@@ -50,6 +50,7 @@ dependencies {
 //    implementation(libs.kotlinx.parcelize.runtime)
     implementation(libs.material.v1110)
     implementation(project(":bottomsheet_common"))
+    implementation(project(":ShareElement"))
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.recyclerview)
@@ -61,5 +62,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
 
 }

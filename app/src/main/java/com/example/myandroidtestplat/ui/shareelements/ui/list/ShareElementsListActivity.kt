@@ -39,7 +39,7 @@ import com.example.myandroidtestplat.R
 import com.example.myandroidtestplat.databinding.ActivityListBinding
 import com.example.myandroidtestplat.ui.shareelements.data.Category
 import com.example.myandroidtestplat.ui.shareelements.data.Item
-import com.example.myandroidtestplat.ui.shareelements.ui.details.DetailsActivity
+import com.example.myandroidtestplat.ui.shareelements.ui.details.Details1Activity
 import com.example.myandroidtestplat.ui.shareelements.util.ItemsAdapter
 import com.example.myandroidtestplat.ui.shareelements.util.DataProvider
 import androidx.core.util.Pair
@@ -56,7 +56,7 @@ class ShareElementsListActivity : AppCompatActivity(), ItemsAdapter.OnItemClickL
   }
 
   override fun onItemClick(item: Item, itemView: View) {
-    val detailsIntent = Intent(this, DetailsActivity::class.java)
+    val detailsIntent = Intent(this, Details1Activity::class.java)
     detailsIntent.putExtra(getString(R.string.bundle_extra_item), item)
 
     // Start Activity with shared-transition animation

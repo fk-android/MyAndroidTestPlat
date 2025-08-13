@@ -13,18 +13,17 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myandroidtestplat.databinding.ActivityMainBinding
-import com.example.myandroidtestplat.ui.activity.FlipimageviewActivity
+import com.example.myandroidtestplat.databinding.ActivityMytestmainBinding
 import com.example.myandroidtestplat.ui.activity.SmplesActivity
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMytestmainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMytestmainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.appBarMain.toolbar)
 

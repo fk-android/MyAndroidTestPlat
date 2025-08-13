@@ -36,18 +36,18 @@ import android.view.View
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myandroidtestplat.R
-import com.example.myandroidtestplat.databinding.ActivityDetailsBinding
+import com.example.myandroidtestplat.databinding.ActivityShareelement1detailsBinding
 import com.example.myandroidtestplat.ui.shareelements.data.Item
 
-class DetailsActivity : AppCompatActivity() {
+class Details1Activity : AppCompatActivity() {
 
   private var item: Item? = null
-  private var _binding:ActivityDetailsBinding?=null
+  private var _binding: ActivityShareelement1detailsBinding?=null
   private val binding get() = _binding!!
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    _binding=ActivityDetailsBinding.inflate(layoutInflater)
+    _binding=ActivityShareelement1detailsBinding.inflate(layoutInflater)
     setContentView(binding.root)
 
     item = intent.getParcelableExtra(getString(R.string.bundle_extra_item))
